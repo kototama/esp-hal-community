@@ -106,7 +106,7 @@ where
         let channel = channel.configure(pin, config).unwrap();
 
         // Assume the RMT peripheral is set up to use the APB clock
-        let clocks = Clocks::from_raw_clocks();
+        let clocks = Clocks::get();
         let src_clock = clocks.apb_clock.to_MHz();
 
         Self {
